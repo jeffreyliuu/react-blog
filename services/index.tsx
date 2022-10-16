@@ -1,6 +1,6 @@
 import { gql, GraphQLClient } from 'graphql-request';
 
-const graphQLClient = new GraphQLClient("https://api-ca-central-1.hygraph.com/v2/cl6tnmkjf1pyn01ujanfb3vhi/master");
+const graphQLClient = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT);
 
 export const getPosts = async () => {
   const query = gql`
