@@ -5,11 +5,11 @@ import type { AppProps } from 'next/app'
 import '../styles/globals.scss'
 
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
   return (
     <Layout>
       <Component {...pageProps} />
-    </Layout> 
+    </Layout>
   )
 }
 

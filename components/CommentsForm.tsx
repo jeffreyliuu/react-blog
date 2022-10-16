@@ -1,7 +1,9 @@
+// @ts-nocheck
+
 import React, { useState, useEffect, useRef } from 'react';
 import { submitComment } from '../services';
 
-const CommentsForm = ({ slug }) => {
+const CommentsForm = ({ slug }: {slug: any}) => {
     const [error, setError] = useState(false);
     const [localStorage, setLocalStorage] = useState(null);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -12,6 +14,7 @@ const CommentsForm = ({ slug }) => {
     const storeDataEl = useRef();
 
     useEffect(() => {
+        
         nameEl.current.value = window.localStorage.getItem('name');
         emailEl.current.value = window.localStorage.getItem('email');
     }, [])
@@ -19,7 +22,6 @@ const CommentsForm = ({ slug }) => {
 
     const handleCommentSubmission = () => {
         setError(false);
-
         const { value: comment } = commentEl.current;
         const { value: name } = nameEl.current;
         const { value: email } = emailEl.current;
