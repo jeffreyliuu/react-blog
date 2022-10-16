@@ -9,7 +9,7 @@ const posts = [
   { title: 'React with Tailwind', excerpt: 'Learn React with Tailwind' }
 ];
 
-const Home = ({ posts }) => {
+const Home = ({ posts }: { posts: any }) => {
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
