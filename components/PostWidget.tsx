@@ -23,7 +23,7 @@ const PostWidget = ({ categories, slug } : {categories: any, slug: any}) => {
       <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
         {slug ? 'Related posts' : 'Recent Posts'}
       </h3>
-      {relatedPosts.map((post: any) => (
+      {relatedPosts.slice(0).reverse().map((post: any) => (
         <div  key={post.title} className='flex items-center w-full mb-4'>
           <div className="w-16 flex-none">
             <img

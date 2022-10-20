@@ -22,7 +22,7 @@ const Comments = ({ slug } : {slug: any}) => {
             {' '}
             Comments
           </h3>
-            {comments.map((comment : any, index) => (
+            {comments.slice(0).reverse().map((comment : any, index) => (
               <div key={comment.createdAt} className="border-b border-gray-100 mb-4 pb-4">
                 <p className="mb-4">
                   <span className="font-semibold">{comment.name}</span>
